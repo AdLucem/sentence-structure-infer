@@ -1,16 +1,31 @@
 
-class SentenceEdit:
+from utils import hindi_corpus_tokenize
+from lexical_diff import LexicalDiff
 
-    def __init__(self, source, target, postedit):
 
-        self.source_sentence = source
-        self.target_sentence = target
-        self.post_edited_sentence = postedit
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
-    def detect_difference(self):
-        pass
+MT_CORPUS = "data/eng-hin-mt.txt"
+MODIFIED_CORPUS = "data/eng-hin-modified.txt"
+n = 10
 
-    def error_in_sequence(self):
-        pass
+# take the mt corpus and divide it into sentences
+mt = hindi_corpus_tokenize(MT_CORPUS, n)
+mod = hindi_corpus_tokenize(MODIFIED_CORPUS, n)
 
-    def error_in_tree(self):
+# for each sentence
+for i in range(n):
+    src = mt[i]
+    tgt = mod[i]
+
+    # take a lexical diff of it
+    diff = LexicalDiff(src, tgt)
+    diff.get_words_removed()
+    diff.get_words_added()
+
+    # display the diff
+    diff.display()
+    print
+    print "-----------------------------------------"
