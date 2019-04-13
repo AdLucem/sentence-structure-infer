@@ -1,4 +1,3 @@
-"""Chunk the hindi sentences using NLTK"""
 
 import stanfordnlp
 

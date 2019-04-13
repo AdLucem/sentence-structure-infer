@@ -1,0 +1,30 @@
+National Building Code Sectional Committee, CED 46
+नैशनल इमारत_का_सङ्केत सेक्शनल समिति, सेड 46
+नेशनल बिल्डिंग कोड सेक्शनल कमिटी (National Building Code Sectional Committee), CED 46
+FOREWORD
+प्राक्कथन
+फॉरवॉर्ड
+This Code (Part 6/Section 2) deals with the structural design aspects of foundations and mainly covers the design principles involved in different types of foundations.
+यह कोव्ड (पॉर्ट 6/सेक्शन 2) नींव के संरचनात्मक रचना पहलुओं के साथ वर्णन करता है और नींव में विभिन्न प्रकारों की सम्मिलित रचना सिद्धान्त प्रमुख रूप से ढकता है।
+नेशनल बिल्डिंग कोड (Part 6 / Section 2)-इस कोड में फाउंडेशन (नींव) के  स्ट्रक्चरल डिजाइन (Structural Design) के पहलुओं के बारे में बताया गया है।   इस कोड में मुख्य रूप से विभिन्न प्रकार के फाउंडेशनों के डिजाइन संबंधी सिद्धांत दिए गए हैं। 
+This Section was published in 1970, and subsequently revised in 1983 and 2005. In the first revision, design considerations in respect of shallow foundation were modified, provisions regarding pier foundation were added and provisions regarding raft foundation and pile foundation were revised and elaborated. 
+यह सेक्शन 1970 में प्रकाशित किया गया था, और बाद में 1983 और 2005 में दोहराया गया था।
+प्रथम पुनः अवलोकन में, छिछला नींव के_विषय में रचना_सोच विचार संशोधन गये थे, स्तम्भ नींव के बारे में प्रबन्ध जोडे गये थे और लठ्ठों_का_बेडा नींव और ढेर नींव के बारे में प्रबन्ध दोहराए गये थे और विस्तार किए गये थे।
+यह सेक्शन पहली बार वर्ष 1970 में प्रकाशित किया गया था और बाद में वर्ष1983 एवं 2005 में इसे संशोधित किया गया था। पहले संशोधन में, शैलो फाउंडेशन (shallow foundations) से संबंधित डिजाइनों को संशोधित किया गया था, और  पियर फाउंडेशन (pier foundation) से संबंधित प्रावधानों को जोड़ा गया था, और रॉफ्ट फाउंडेशन (raft foundation)  तथा पाइल फाउंडेशन (pile foundation) से संबंधित प्रावधानों में संशोधन किया गया था और उन्हें विस्तार से समझाया गया था।
+In the second revision, design considerations in respect of shallow foundations were again modified, method for determining depth of fixity, lateral deflection and maximum moment of laterally loaded piles were modified and reference was made to ground improvement techniques.
+दूसरे पुनः अवलोकन में, छिछला नींव के_विषय में रचना_सोच विचार फिर से संशोधन गया था, पार्श्व की ओर लादे हुए ढेरों की दृढ निश्चय, पार्श्विक विक्षेपण और अधिकतम क्षण का गहराई निर्धारित करने के लिए प्रणाली संशोधन गयीं थीं और सन्द्र्भ जमीन_सुधार तकनीक को बनाया गया था।
+दूसरे संशोधन में, शैलो फाउंडेशन (shallow foundations) से संबंधित डिजाइनों को पुनः संशोधित किया गया था। इसके अलावा लेटरली लोडेड पाइल्स (laterally loaded piles) के फिक्सीटी डेप्थ (fixity depth), लेटेरल डिफ्लेक्शन (lateral deflection) और मैक्सिमम मोमेन्ट (maximum moment) को निर्धारित करने की विधि को भी संशोधित किया गया है, और जमीन को ठोस बनाने (ground improvement) की तकनीकों पर चर्चा की गई है।
+a) The scope of this Section has been extended to cover design of foundations on rock.
+) द क्षेत्र इस सेक्शन का चट्टान पर नींव की रचना ढकने के लिए बढाया गया है।
+a)रॉक फाउंडेशन (rock foundation) के डिजाइन को शामिल करने के लिए इस सेक्शन के विषय-क्षेत्र को बढ़ा दिया गया है। 
+b) Definitions of various terms have been modified as per the prevailing engineering practice and new terms have been added, particularly those relating to pile foundation and ground improvement.
+बी) विभिन्न अवधि का डेफ़निशन्ज़ प्रचलित होती हुई अभियान्त्रिकी प्रथा के अनुसार संशोधन गया है कि और नयी अवधि जोडी गयीं हैं, विशेष रूप से वे नींव और जमीन सुधार ढेर लगने के लिए सम्बन्धित करता हुआ।
+b) वर्तमान इंजीनियरिंग प्रैक्टिस के अनुसार विभिन्न  शब्दों की परिभाषाएँ संशोधित की गई हैं और विषेशतः पाइल फाउंडेशन (pile foundation) एवं जमीन को ठोस बनाने (ground improvement) से संबंधित नई शब्द  जोड़े गए हैं। 
+c) The clause on site investigation has been completely reviewed and number of modifications have been included, such as, new methods of soil investigation have been added; depth of exploration for pile foundations has been added; new sub-clauses on vertical interval for field tests and site investigation report have been added; etc.
+सी) साइट परीक्षण पर द उपवाक्य पूरी तरह से परखा गया है और अङ्क सुधारों का एट्च्.. सम्मिलित किया गया है, मिट्टी परीक्षण की नयी प्रणाली जोडी गयीं हैं; ढेर नींव के लिए खोज की गहराई आगे कही गयी है; क्षेत्र परीक्षाओं और साइट जाँच_पडताल प्रतिवेदन के लिए लम्बरूप अन्तराल पर नया सुब्-च्लउसेस् आगे कहा गया है।;
+c) साइट की जाँच (site investigation) संबंधी खंड की पूरी समीक्षा की गई है और इसमें कई नये संशोधन किए गए हैं, यथा-मिट्टी की जांच के नए तरीके जोड़ दिए गए हैं;  पाइल फाउंडेशन्स (pile foundation) की संभावित गहराई संबंधी प्रावधान (depth of exploration) जोड़ा गया है;  फ़ील्ड टेस्ट और साइट इन्वेस्टिगेशन रिपोर्ट आदि के vertical interval संबंधी नये उप-खंड भी जोड़े गए हैं। 
+डी) मेथड क्योंकि साइट की लिक्वफैक्शन अन्तर्निहित शक्ति का आँकलन पॉर्ट 6 का प्रति-निर्देश दे "स्ट्रक्चरल डिज़ाइन, कूट सङ्केत की सेक्शन आई लोव्ड्ज़, फ़ोर्सिज़ और इफ़ेक्ट्स में से सम्मिलित किया गया है।"
+d) इस कोड के Part 6 "Structural Design, Section I Loads, Forces and Effects"के क्रॉस-रेफरेंस के माध्यम से साइट के liquefaction potential के आकलन की विधि शामिल की गई है। 
+e) Permissible differential settlements and tilt (angular distortion) for shallow foundations in soils as given in Table 3 has been modified.
+ई) मिट्टियों में छिछला नींव के लिए भिन्नक गियर समझौते और झुकाव (दुर्बल टेढापन) पर्मिसबल जैसा कि टेबल 3 में दिया हुआ संशोधन गया है।
+e) Table 3 में दी गई मिट्टी की शैलो फाउंडेशन के लिए 'Permissible differential settlements' and tilt को संशोधित किया गया है। 
