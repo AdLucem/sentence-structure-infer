@@ -13,20 +13,35 @@ from chunk.dep_tree import DepTree
 from chunk.dep_chunk import dep_chunk
 #from utils.utils import hindi_corpus_tokenize
 #from lexical_diff import LexicalDiff
+import re
 
 SENTENCE_FILE = "generated/templist.txt"
 
 data = Sentence.read_sentence_file(SENTENCE_FILE)
 
 for obj in data:
-    example = obj.mt
-    deps = obj.mt_dep_parse()
+    mod = re.sub(r"[A-Za-z()]", "", obj.postedit)
+    mt = obj.mt
+    
+    deps_mt = obj.mt_dep_parse()
+    deps_mod = obj.mod_dep_parse()
 
-    tree = DepTree()
-    tree.make_tree(deps)
-    print(tree.test_tree(deps))
-    chunks = dep_chunk(tree)
-    print(chunks)
+    tree_mt = DepTree()
+    tree_mt.make_tree(deps_mt)
+    tree_mod = DepTree()
+    tree_mod.make_tree(deps_mod)
+
+    head_mt_index = tree_mt.tree[0].children[0]
+    head_mod_index = tree_mod.tree[0].children[0]
+
+    head_mt = tree_mt.tree[head_mt_index].word 
+    head_mod = tree_mod.tree[head_mod_index].word
+    
+    print(str(head_mt) + "  " + str(head_mod))
+    #print(tree_mod.test_tree(deps_mod))
+    #chunks = dep_chunk(tree)
+    #print(chunks)
+
 """
 MT_CORPUS = "data/eng-hin-mt.txt"
 MODIFIED_CORPUS = "data/eng-hin-modified.txt"

@@ -97,7 +97,7 @@ class DepTree:
         for i in self.tree:
             print(str(i) + " : " + str(self.tree[i].children))
 
-    @staticmethod
-    def get_subtree(index):
+#    @staticmethod
+#    def get_subtree(index):
 
         
