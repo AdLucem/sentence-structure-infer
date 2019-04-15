@@ -36,7 +36,7 @@ class Sentence:
         return sentences
 
     @staticmethod
-    def get_deps(sentence):
+    def print_deps(sentence):
 
         doc = Sentence.nlp(sentence)
         s = doc.sentences

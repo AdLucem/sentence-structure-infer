@@ -9,20 +9,24 @@
 # ======================================================================
 
 from generic.read_data import Sentence
+from chunk.dep_tree import DepTree
+from chunk.dep_chunk import dep_chunk
 #from utils.utils import hindi_corpus_tokenize
 #from lexical_diff import LexicalDiff
 
 SENTENCE_FILE = "generated/templist.txt"
 
 data = Sentence.read_sentence_file(SENTENCE_FILE)
-example = data[0].postedit
 
-Sentence.get_deps(example)
+for obj in data:
+    example = obj.mt
+    deps = obj.mt_dep_parse()
 
-#print(data[0].mt_dep_parse())
-#print(data[0].mod_dep_parse())
-
-
+    tree = DepTree()
+    tree.make_tree(deps)
+    print(tree.test_tree(deps))
+    chunks = dep_chunk(tree)
+    print(chunks)
 """
 MT_CORPUS = "data/eng-hin-mt.txt"
 MODIFIED_CORPUS = "data/eng-hin-modified.txt"
