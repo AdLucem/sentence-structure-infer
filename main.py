@@ -31,18 +31,18 @@ for obj in data:
     tree_mod = DepTree()
     tree_mod.make_tree(deps_mod)
 
-    head_mt_index = tree_mt.tree[0].children[0]
+
+"""    head_mt_index = tree_mt.tree[0].children[0]
     head_mod_index = tree_mod.tree[0].children[0]
 
     head_mt = tree_mt.tree[head_mt_index].word 
     head_mod = tree_mod.tree[head_mod_index].word
-    
+
     print(str(head_mt) + "  " + str(head_mod))
     #print(tree_mod.test_tree(deps_mod))
     #chunks = dep_chunk(tree)
     #print(chunks)
-
-"""
+-----------------------------------------------------
 MT_CORPUS = "data/eng-hin-mt.txt"
 MODIFIED_CORPUS = "data/eng-hin-modified.txt"
 n = 10

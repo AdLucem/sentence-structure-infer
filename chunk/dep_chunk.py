@@ -1,5 +1,3 @@
-"""Given the dependency tree, broadly 'chunk'- down to a given level- by gathering all the nodes in the subtrees that branch from the head node. Return chunks plus head node"""
-
 
 def dep_chunk(dep_obj):
 
