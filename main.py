@@ -1,18 +1,9 @@
-# ==================== Setting Up System Encoding ======================
-
-"""This should remain at the top of the main.py file"""
-#import sys
-#import importlib
-#importlib.reload(sys)
-#sys.setdefaultencoding('utf-8')
-
-# ======================================================================
-
 from generic.read_data import Sentence
+from generic.read_anu import translate
 from chunk.dep_tree import DepTree
 from chunk.dep_chunk import dep_chunk
-#from utils.utils import hindi_corpus_tokenize
-#from lexical_diff import LexicalDiff
+from utils.utils import all_match
+
 import re
 
 SENTENCE_FILE = "generated/templist.txt"
@@ -20,9 +11,12 @@ SENTENCE_FILE = "generated/templist.txt"
 data = Sentence.read_sentence_file(SENTENCE_FILE)
 
 for obj in data:
+    sent = obj.source
+    # chunks_mt = translate(sent)
+
     mod = re.sub(r"[A-Za-z()]", "", obj.postedit)
     mt = obj.mt
-    
+
     deps_mt = obj.mt_dep_parse()
     deps_mod = obj.mod_dep_parse()
 
@@ -31,17 +25,33 @@ for obj in data:
     tree_mod = DepTree()
     tree_mod.make_tree(deps_mod)
 
+    chunks_mt, ind_mt = dep_chunk(tree_mt)
+    chunks_mod, ind_mod = dep_chunk(tree_mod)
 
-"""    head_mt_index = tree_mt.tree[0].children[0]
-    head_mod_index = tree_mod.tree[0].children[0]
+##    print(len(chunks_mt), len(chunks_mod))
+    while (len(chunks_mt) > 0) and (len(chunks_mod) > 0):
+        chunks, cl = all_match(chunks_mt, chunks_mod)
+        if cl == 0:
+            break
 
-    head_mt = tree_mt.tree[head_mt_index].word 
-    head_mod = tree_mod.tree[head_mod_index].word
+        src = chunks[0]
+        tgt = chunks[1]
+        srcChunk = tree_mt.get_subtree(ind_mt[src])
+        tgtChunk = tree_mod.get_subtree(ind_mod[tgt])
+        print(srcChunk, tgtChunk)
 
-    print(str(head_mt) + "  " + str(head_mod))
-    #print(tree_mod.test_tree(deps_mod))
-    #chunks = dep_chunk(tree)
-    #print(chunks)
+##        if chunks[0] in chunks_mt:
+##            print("YES", end=",")
+##        if chunks[1] in chunks_mod:
+##            print("YES")
+        chunks_mt.remove(chunks[0])
+        chunks_mod.remove(chunks[1])
+##    print(len(chunks_mt))
+##    print(len(chunks_mod))
+    print("----------------------------")
+
+
+"""
 -----------------------------------------------------
 MT_CORPUS = "data/eng-hin-mt.txt"
 MODIFIED_CORPUS = "data/eng-hin-modified.txt"

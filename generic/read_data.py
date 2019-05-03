@@ -1,4 +1,6 @@
 import stanfordnlp
+import re
+
 
 class Sentence:
 
@@ -8,7 +10,13 @@ class Sentence:
 
         self.source = src
         self.mt = mt
-        self.postedit = mod
+        self.postedit = Sentence.clean_postedit(mod)
+
+    @staticmethod
+    def clean_postedit(sent):
+        """Remove english words from the postedited sentences"""
+        sent = re.sub(r'[A-Za-z]', "", sent)
+        return sent
 
     def display(self):
 

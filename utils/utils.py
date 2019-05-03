@@ -1,5 +1,46 @@
 
-from HindiTokenizer import Tokenizer
+from fuzzywuzzy.fuzz import token_sort_ratio as ratio
+
+from utils.HindiTokenizer import Tokenizer
+
+
+def all_match(chunksA, chunksB):
+    """Find closest matching pair of chunks"""
+
+    closest = [[], []]
+    by_amt = 0
+    for chunk in chunksA:
+        match, amt = match_chunk(chunk, chunksB)
+
+        if amt > by_amt:
+            by_amt = amt
+            closest[0] = chunk
+            closest[1] = match
+
+    return closest, by_amt
+
+
+def match_chunk(chunkA, chunks):
+    """Return the chunk in the `chunks` list that
+    most closely matches the given chunk"""
+
+    #a = " ".join(chunkA)
+    a = chunkA
+
+    closest = []
+    closest_ratio = 0
+    for chunk in chunks:
+    #    b = " ".join(chunk)
+        b = chunk
+        r = ratio(a, b)
+        # test print:
+        # print(a, "|", b, "|", r)
+
+        if r > closest_ratio:
+            closest_ratio = r
+            closest = chunk
+
+    return closest, closest_ratio
 
 
 def hindi_corpus_tokenize(filename, n):

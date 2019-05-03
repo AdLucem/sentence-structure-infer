@@ -29,6 +29,12 @@ class DepTree:
             head, word = arc[0], arc[2]
             head_index, word_index = int(head.index), int(word.index)
 
+            """checking for punctuation"""
+            if head.text in "()[]{},":
+                continue
+            elif word.text in "()[]{},":
+                continue
+
             """Adding word to the tree"""
 
             # making a new node from the word, if word doesn't already exist
@@ -82,7 +88,7 @@ class DepTree:
     def show_tree(self):
 
         def print_node(index):
-        
+
             s = " ( " + str(index)
 
             for i in self.tree[index].children:
@@ -97,7 +103,34 @@ class DepTree:
         for i in self.tree:
             print(str(i) + " : " + str(self.tree[i].children))
 
-#    @staticmethod
-#    def get_subtree(index):
+    def get_subtree(self, index):
 
-        
+        head = self.tree[index]
+
+        def get_children(tree, node, index):
+
+            all_ch = []
+            childs = node.children
+
+            if childs == []:
+                return all_ch
+
+            for child_index in childs:
+                child_node = tree[child_index]
+                all_ch += [child_index]
+                # get the word
+                # all_ch += [child_node.word]
+                all_ch += get_children(tree, child_node, child_index)
+
+            return sorted(all_ch)
+
+        ls = get_children(self.tree, head, index)
+        ls.append(index)
+        ls = sorted(ls)
+
+        # get words
+        subtree = []
+        for i in ls:
+            subtree.append(self.tree[i].word)
+
+        return subtree
