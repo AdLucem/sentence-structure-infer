@@ -22,7 +22,7 @@ def headers(content_len):
 
 
 def translate(sentence):
-    """Returns chunked, ITRANS-encoded translated sentence"""
+    """Returns the anusaaraka translated sentence"""
 
     h = headers(len(sentence))
     url = "https://sampark.iiit.ac.in/Anusaaraka-web-layer-0.4/AnusaarakaService"
@@ -30,19 +30,6 @@ def translate(sentence):
 
     r = requests.post(url, data=d, headers=h)
     data = json.loads(r.content, encoding="utf-8")
-    out = data['layered_output'][0]['output'].split("\t")
-
-    # clean 'out'
-    for index, chunk in enumerate(out):
-        out[index] = re.split(r'_|\s', chunk)
-
-    # transliterate the chunked sentence
-    for index, chunk in enumerate(out):
-
-        trans = []
-        for word in chunk:
-            word = translit(word)
-            trans.append(word)
-        out[index] = trans
+    out = data['output']
 
     return out

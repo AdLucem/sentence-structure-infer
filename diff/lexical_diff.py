@@ -40,13 +40,13 @@ class LexicalDiff:
         for i in range(len(src)):
             word = src[i]
             if i in rem:
-                print "(" + word + ") ",
+                print("(" + word + ") ", end=' ')
             else:
-                print word + " ",
-        print
+                print(word + " ", end=' ')
+        print("\n--------------------------------------------")
         for j in range(len(tgt)):
             word = tgt[j]
             if j in add:
-                print "(" + word + ") ",
+                print("(" + word + ") ", end=' ')
             else:
-                print word + " ",
+                print(word + " ", end=' ')

@@ -1,0 +1,67 @@
+Use device: cpu
+---
+Loading: tokenize
+With settings: 
+{'model_path': '/home/adlucem/stanfordnlp_resources/hi_hdtb_models/hi_hdtb_tokenizer.pt', 'lang': 'hi', 'shorthand': 'hi_hdtb', 'mode': 'predict'}
+---
+Loading: pos
+With settings: 
+{'model_path': '/home/adlucem/stanfordnlp_resources/hi_hdtb_models/hi_hdtb_tagger.pt', 'pretrain_path': '/home/adlucem/stanfordnlp_resources/hi_hdtb_models/hi_hdtb.pretrain.pt', 'lang': 'hi', 'shorthand': 'hi_hdtb', 'mode': 'predict'}
+---
+Loading: lemma
+With settings: 
+{'model_path': '/home/adlucem/stanfordnlp_resources/hi_hdtb_models/hi_hdtb_lemmatizer.pt', 'lang': 'hi', 'shorthand': 'hi_hdtb', 'mode': 'predict'}
+Building an attentional Seq2Seq model...
+Using a Bi-LSTM encoder
+Using soft attention for LSTM.
+Finetune all embeddings.
+[Running seq2seq lemmatizer with edit classifier]
+---
+Loading: depparse
+With settings: 
+{'model_path': '/home/adlucem/stanfordnlp_resources/hi_hdtb_models/hi_hdtb_parser.pt', 'pretrain_path': '/home/adlucem/stanfordnlp_resources/hi_hdtb_models/hi_hdtb.pretrain.pt', 'lang': 'hi', 'shorthand': 'hi_hdtb', 'mode': 'predict'}
+Done loading processors!
+---
+Traceback (most recent call last):
+  File "/home/adlucem/Work/sentence-structure-infer/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 377, in _make_request
+    httplib_response = conn.getresponse(buffering=True)
+TypeError: getresponse() got an unexpected keyword argument 'buffering'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "create_data.py", line 8, in <module>
+    data = Sentence.read_from_data(SRC_FILE, MOD_FILE)
+  File "/home/adlucem/Work/sentence-structure-infer/generic/read_data.py", line 64, in read_from_data
+    mt = translate(src)
+  File "/home/adlucem/Work/sentence-structure-infer/generic/read_anu.py", line 31, in translate
+    r = requests.post(url, data=d, headers=h)
+  File "/home/adlucem/Work/sentence-structure-infer/venv/lib/python3.6/site-packages/requests/api.py", line 116, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/home/adlucem/Work/sentence-structure-infer/venv/lib/python3.6/site-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/adlucem/Work/sentence-structure-infer/venv/lib/python3.6/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/adlucem/Work/sentence-structure-infer/venv/lib/python3.6/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/adlucem/Work/sentence-structure-infer/venv/lib/python3.6/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/adlucem/Work/sentence-structure-infer/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/home/adlucem/Work/sentence-structure-infer/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 380, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.6/http/client.py", line 1331, in getresponse
+    response.begin()
+  File "/usr/lib/python3.6/http/client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.6/http/client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.6/ssl.py", line 1012, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.6/ssl.py", line 874, in read
+    return self._sslobj.read(len, buffer)
+  File "/usr/lib/python3.6/ssl.py", line 631, in read
+    v = self._sslobj.read(len, buffer)
+KeyboardInterrupt

@@ -1,6 +1,8 @@
 import stanfordnlp
 import re
 
+from generic.read_anu import translate
+
 
 class Sentence:
 
@@ -42,6 +44,31 @@ class Sentence:
             sentences.append(new_sent)
 
         return sentences
+
+    @staticmethod
+    def read_from_data(src_file, mod_file):
+
+        with open(src_file, "r+") as f:
+            src_sents = f.readlines()
+        with open(mod_file, "r+") as f:
+            mod_sents = f.readlines()
+
+        num_lines = len(src_sents)
+        sentences = []
+        for i in range(0, num_lines):
+            src = src_sents[i]
+
+            if len(src) > 200:
+                continue
+
+            mt = translate(src)
+            mod = mod_sents[i]
+            new_sent = Sentence(src, mt, mod)
+            sentences.append(new_sent)
+
+        return sentences
+
+
 
     @staticmethod
     def print_deps(sentence):
